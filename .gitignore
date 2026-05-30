@@ -3,21 +3,27 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual Environment
+# Virtual environments
 venv/
 ENV/
 env/
 
-# Portable App Folders (Users should keep their own templates/photos)
+# Build / packaging
+dist/
+build/
+appimage-build/
+
+# Runtime outputs
 output/
 logs/
-config/default.json
-photos/*
-!photos/.gitkeep
-templates/*
-!templates/.gitkeep
-themes/*.theme.json
 
-# System Files
+# System files
 .DS_Store
 Thumbs.db
+
+# User-generated data (only if truly runtime)
+photos/*
+!photos/.gitkeep
+
+# Optional runtime config (only if not needed for app)
+config/runtime*.json

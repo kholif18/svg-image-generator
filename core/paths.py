@@ -5,9 +5,13 @@ import shutil
 from pathlib import Path
 
 # Get the base directory of the application
-# If running as a frozen executable (PyInstaller), use sys._MEIPASS
-if getattr(sys, 'frozen', False):
+# 1. Check if running as an AppImage
+if os.environ.get('APPIMAGE'):
+    BASE_DIR = Path(os.environ.get('APPIMAGE')).resolve().parent
+# 2. Check if running as a frozen executable (PyInstaller)
+elif getattr(sys, 'frozen', False):
     BASE_DIR = Path(sys.executable).resolve().parent
+# 3. Running from source
 else:
     BASE_DIR = Path(__file__).resolve().parent.parent
 

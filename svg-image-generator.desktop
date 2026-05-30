@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=SVG Image Generator
+Comment=Flexible SVG and Image Generator
+Exec=svg-image-generator
+Icon=svg-image-generator
+Categories=Graphics;
+Terminal=false
