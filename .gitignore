@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Portable App Folders (Users should keep their own templates/photos)
+output/
+logs/
+config/default.json
+photos/*
+!photos/.gitkeep
+templates/*
+!templates/.gitkeep
+themes/*.theme.json
+
+# System Files
+.DS_Store
+Thumbs.db
