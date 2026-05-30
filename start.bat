@@ -2,16 +2,31 @@
 cd /d "%~dp0"
 
 echo Starting SVG Generator...
+echo.
 
-:: Check if virtual environment exists and use it
 if exist venv\Scripts\python.exe (
-    venv\Scripts\python.exe main.py
+    set PYTHON=venv\Scripts\python.exe
 ) else (
-    python main.py
+    set PYTHON=python
 )
 
-if %errorlevel% neq 0 (
+%PYTHON% -c "import pandas, PyQt6, openpyxl, lxml" >nul 2>&1
+
+if errorlevel 1 (
+    echo Dependencies belum terinstall.
     echo.
-    echo Application crashed or could not start.
+    echo Jalankan:
+    echo.
+    echo     pip install -r requirements.txt
+    echo.
+    pause
+    exit /b 1
+)
+
+%PYTHON% main.py
+
+if errorlevel 1 (
+    echo.
+    echo Application crashed.
     pause
 )
