@@ -10,6 +10,14 @@ Generate ribuan sertifikat, ID Card, Piagam, Name Tag, atau dokumen berbasis SVG
 
 ---
 
+## Screenshot
+
+<img src="img/img1.png" width="700">
+<img src="img/img2.png" width="700">
+<img src="img/img3.png" width="700">
+<img src="img/img4.png" width="700">
+
+---
 ## ✨ Fitur Utama
 
 ### 📄 SVG Template Engine
